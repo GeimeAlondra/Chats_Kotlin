@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "782597818221",
+    "project_id": "chats-kotlin-a40be",
+    "storage_bucket": "chats-kotlin-a40be.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782597818221:android:f10bc31456599b2d353c64",
+        "android_client_info": {
+          "package_name": "com.example.chats_kotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBadIhhBNopOC5qdKs4L6C95c4zgxaJLMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
