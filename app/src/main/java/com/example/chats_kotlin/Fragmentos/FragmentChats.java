@@ -13,7 +13,6 @@ import com.example.chats_kotlin.R;
 public class FragmentChats extends Fragment {
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

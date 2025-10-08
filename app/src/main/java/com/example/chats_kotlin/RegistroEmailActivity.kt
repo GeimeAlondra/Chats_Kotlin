@@ -1,6 +1,7 @@
 package com.example.chats_kotlin
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
@@ -10,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.chats_kotlin.databinding.ActivityRegistroEmailBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import org.intellij.lang.annotations.Pattern
 
 
@@ -98,6 +100,33 @@ class RegistroEmailActivity : AppCompatActivity() {
 
     private fun actualizarInformacion() {
         progressDialog.setMessage("Guardando información")
+
+        val uidU = firebaseAuth.uid
+        val nombresU = nombres
+        val emailU = firebaseAuth.currentUser!!.email
+        val tiempoR = Constantes.obtenerTiempoDelD()
+
+        // Enviar informacion a Firebase
+        val datosUsuarios = HashMap<String, Any>()
+        datosUsuarios["uid"] = "$uidU"
+        datosUsuarios["nombres"] = "$nombresU"
+        datosUsuarios["email"] = "$emailU"
+        datosUsuarios["tiempoR"] = "$tiempoR"
+        datosUsuarios["proveedor"] = "Email"
+        datosUsuarios["estado"] = "online"
+
+        // Guardamos la informacion en Firebase
+        val reference = FirebaseDatabase.getInstance().getReference("usuarios")
+        reference.child(uidU!!)
+            .setValue(datosUsuarios)
+            .addOnCompleteListener {
+                progressDialog.dismiss()
+                startActivity(Intent(applicationContext, MainActivity::class.java))
+            }
+
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Fallo la creación de la cuenta debido a ${e.message}", Toast.LENGTH_SHORT).show()
+            }
     }
 
 

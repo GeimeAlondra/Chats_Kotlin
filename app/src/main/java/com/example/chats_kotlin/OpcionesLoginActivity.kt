@@ -32,9 +32,5 @@ class OpcionesLoginActivity : AppCompatActivity() {
 
 
 
-
-
-
-
     }
 }
