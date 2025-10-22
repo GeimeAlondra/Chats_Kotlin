@@ -114,6 +114,7 @@ class RegistroEmailActivity : AppCompatActivity() {
         datosUsuarios["tiempoR"] = "$tiempoR"
         datosUsuarios["proveedor"] = "Email"
         datosUsuarios["estado"] = "online"
+        datosUsuarios["imagen"] = ""
 
         // Guardamos la informacion en Firebase
         val reference = FirebaseDatabase.getInstance().getReference("usuarios")
