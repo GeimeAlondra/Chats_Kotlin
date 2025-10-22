@@ -27,7 +27,13 @@ class FragmentPerfil : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentPerfilBinding.inflate(layoutInflater)
+        binding = FragmentPerfilBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.btnCerrarSesion.setOnClickListener {
@@ -35,9 +41,6 @@ class FragmentPerfil : Fragment() {
             startActivity(Intent(context, OpcionesLoginActivity::class.java))
             activity?.finishAffinity()
         }
-
-        binding = FragmentPerfilBinding.inflate(layoutInflater, container, false)
-        return binding.root
     }
 
 }

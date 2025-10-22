@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,14 +9,105 @@
     android:orientation="vertical"
     tools:context=".Fragmentos.FragmentPerfil">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_CerrarSesion"
-        android:text="@string/btn_CerrarSesion"
-        android:textAllCaps="true"
+    <RelativeLayout
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        app:cornerRadius="10dp"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_perfil"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/acount"
+            />
+
+       <!-- NOMBRES -->
+        <TextView
+            android:id="@+id/txt_nombre"
+            android:text="@string/txt_nombre"
+            android:layout_below="@+id/iv_perfil"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_nombre"
+            android:text="@string/tv_nombre"
+            android:layout_below="@+id/iv_perfil"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- EMAIL -->
+        <TextView
+            android:id="@+id/txt_email"
+            android:text="@string/txt_email"
+            android:layout_below="@+id/txt_nombre"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:text="@string/tv_email"
+            android:layout_below="@+id/txt_nombre"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- PROVEEDOR -->
+        <TextView
+            android:id="@+id/txt_proveedor"
+            android:text="@string/txt_proveedor"
+            android:layout_below="@+id/txt_email"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_proveedor"
+            android:text="@string/tv_proveedor"
+            android:layout_below="@+id/txt_email"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- REGISTRO -->
+        <TextView
+            android:id="@+id/txt_t_registro"
+            android:text="@string/txt_t_registro"
+            android:layout_below="@+id/txt_proveedor"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_t_registro"
+            android:text="@string/tv_t_registro"
+            android:layout_below="@+id/txt_proveedor"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_CerrarSesion"
+            android:text="@string/btn_CerrarSesion"
+            android:textAllCaps="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_below="@id/txt_t_registro"
+            android:layout_marginTop="25dp"
+            app:cornerRadius="10dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</ScrollView>

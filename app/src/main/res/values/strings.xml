@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Chats-Kotlin</string>
 
+    <string name="default_web_client_id">AIzaSyBadIhhBNopOC5qdKs4L6C95c4zgxaJLMQ</string>
+
     <string name="item_perfil">Perfil</string>
     <string name="item_usuarios">Usuarios</string>
     <string name="item_chats">Chats</string>
@@ -22,6 +24,15 @@
     <string name="btn_Registrar">Registrar</string>
 
     <string name="btn_CerrarSesion">Cerrar sesión</string>
+
+    <string name="txt_nombre">Nombres: </string>
+    <string name="tv_nombre"> -- </string>
+    <string name="txt_email">Email: </string>
+    <string name="tv_email"> -- </string>
+    <string name="txt_proveedor">Proveedor: </string>
+    <string name="tv_proveedor"> -- </string>
+    <string name="txt_t_registro">Miembro desde: </string>
+    <string name="tv_t_registro"> -- </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
